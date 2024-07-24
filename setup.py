@@ -166,20 +166,20 @@ use_openmp = not sys.platform.startswith("darwin") and not sys.platform.startswi
 long_description = pathlib.Path(__file__).parent.joinpath("README.md").read_text()
 
 setup(
-    name="lightfm",
+    name="rectools-lightfm",
     version=read_version(),
     description="LightFM recommendation model",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/lyst/lightfm",
-    download_url="https://github.com/lyst/lightfm/tarball/{}".format(read_version()),
+    url="https://github.com/feldlime/rectools-lightfm",
+    download_url="https://github.com/feldlime/rectools-lightfm/tarball/{}".format(read_version()),
     packages=["lightfm", "lightfm.datasets"],
     package_data={"": ["*.c"]},
     install_requires=["numpy", "scipy>=0.17.0", "requests", "scikit-learn"],
     tests_require=["pytest", "requests", "scikit-learn"],
     cmdclass={"cythonize": Cythonize, "clean": Clean},
     author="Lyst Ltd (Maciej Kula)",
-    author_email="data@ly.st",
+    author_email="feldlime@gmail.com",
     license="MIT",
     classifiers=[
         "Development Status :: 5 - Production/Stable",

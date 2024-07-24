@@ -1,8 +1,0 @@
-os:
-  - osx
-before_install:
-  - python3 -m venv venv
-  - venv/bin/pip install -r test-requirements.txt
-install:
-  - venv/bin/pip install -e .
-script: venv/bin/py.test -xv tests/
