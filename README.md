@@ -2,7 +2,15 @@
 
 ## Important
 
-**This is a fork of the [original project](https://github.com/lyst/lightfm) created to maintain the code.**
+**This is a fork of the [original LightFM project](https://github.com/lyst/lightfm)**
+1. Our main goal is to support emerging dependencies like newest versions of Python and to fix compatibility issues. 
+2. We DO NOT guarantee support for all systems.
+3. We DO NOT intend to expand or change any existing LightFM functionality.
+4. We might fix essential bugs.
+
+**About us:** we are maintainers of the [RecTools](https://github.com/MobileTeleSystems/RecTools) recommender systems framework. Our wrapper for LightFM provides 10-15 faster inference then the original model ([benchmark](https://github.com/MobileTeleSystems/RecTools/blob/main/examples/6_benchmark_lightfm_inference.ipynb)).  
+In RecTools we support common RecSys models and validation tools in one easy-to-use framework.
+
 
 ![LightFM logo](lightfm.png)
 
