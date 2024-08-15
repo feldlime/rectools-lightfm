@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - py312 # To test this branch
   pull_request:
     branches:
       - master
