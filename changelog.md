@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.2][2024-10-20]
+
+### Added
+
+- Saving of initial random state
+
+
 ## [1.17.1][2024-07-24]
 
 ### Fixed
