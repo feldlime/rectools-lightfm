@@ -6,13 +6,11 @@
 
 - Saving of initial random state
 
-
 ## [1.17.1][2024-07-24]
 
 ### Fixed
 
 - Installation no attribute `'__LIGHTFM_SETUP__'` error 
-
 
 # Releases below were made in the original repo
 
