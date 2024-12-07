@@ -231,6 +231,7 @@ class LightFM(object):
         self.item_alpha = item_alpha
         self.user_alpha = user_alpha
 
+        self.initial_random_state = random_state  # for reproducibility
         if random_state is None:
             self.random_state = np.random.RandomState()
         elif isinstance(random_state, np.random.RandomState):
