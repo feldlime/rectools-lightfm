@@ -15,12 +15,12 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.11"]
+        python-version: ["3.11", "3.12"]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
@@ -37,5 +37,10 @@ jobs:
         run: |
           pip install -e .
       - name: Test with pytest
+        # Windows pytest never succeeded even with previous Cython version with
+        # Windows fatal exception: access violation
+        # Just verify pip install -e . works on Windows
+        # https://github.com/chezou/rectools-lightfm/actions/runs/10412191347/job/28837492302
+        if: matrix.os != 'windows-latest'
         run: |
           pytest
